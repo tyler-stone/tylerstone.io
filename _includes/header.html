@@ -2,7 +2,7 @@
   {% assign default_paths = site.pages | sort: "weight" | map: "path" %}
   {% assign page_paths = site.header_pages | default: default_paths %}
     
-  <div class="brand">
+  <a href="{{ "/" | relative_url }}" class="brand">
     <div>
       <img src="{{ "/assets/ts-logo.png" | relative_url }}" />
     </div>
@@ -10,7 +10,7 @@
       <h1>{{ site.title | escape }}</h1>
       <h2>{{ site.description | escape }}</h2>
     </div>
-  </div>
+  </a>
 
   <nav>
     {% for path in page_paths %}

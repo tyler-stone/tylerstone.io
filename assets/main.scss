@@ -3,6 +3,7 @@
 
 // Import dependencies.
 @import
+  "../_sass/variables",
   "../_sass/flexboxgrid.min",
   "../_sass/font-awesome.min",
   "../_sass/normalize.min"
@@ -15,16 +16,6 @@ html {
     background: #f9f9f9;
 }
 
-/*::-moz-selection {
-    background: #cccccc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #cccccc;
-    text-shadow: none;
-}
-*/
 hr {
     display: block;
     height: 1px;
@@ -36,6 +27,11 @@ hr {
 
 h1, h2, h3 {
     font-weight: normal;
+}
+
+h2 {
+    color: $primary-blue;
+    font-size: 28px;
 }
 
 fieldset {
@@ -78,24 +74,28 @@ header .brand {
     display: inline-flex;
 }
 
+a.brand:hover {
+    border: none;
+}
+
 header .title-container {
     text-align: left;
-    margin-left: 15px;
+    margin-left: $default-gutter;
     padding-top: 5px;
 }
 
 header h1 {
     margin: 0;
-    font-family: Roboto, arial, san-serif;
+    font-family: $font-stack-primary;
     font-size: 36px;
     line-height: 35px;
-    color: #246F9A;
+    color: $primary-blue;
     text-transform: uppercase;
 }
 
 header h2 {
     margin: 0;
-    font-family: Courier New, monospace;
+    font-family: $font-stack-secondary;
     font-size: 20px;
     color: #666;
 }
@@ -106,7 +106,7 @@ header .title-container {
 
 nav {
     margin-top: 20px;
-    font-family: Courier New, monospace;
+    font-family: $font-stack-secondary;
     font-size: 18px;
 }
 
@@ -125,7 +125,7 @@ a:hover {
 }
 
 nav a {
-    margin-right: 15px;
+    margin-right: $default-gutter;
     padding-bottom: 2px;
 }
 
@@ -134,30 +134,77 @@ nav a:last-child {
 }
 
 nav a.active {
-    border-bottom: 1px solid #246F9A;
+    border-bottom: 1px solid $primary-blue;
 }
 
 .white-tile {
     background-color: white;
-    border: 1px solid #5DC9F5;
-    padding: 15px;
+    border: 1px solid $secondary-blue;
+    padding: $default-gutter;
     box-shadow: 0 0 6px rgba(0,0,0,0.15);
     color: #666666;
+}
+
+.white-tile h3 {
+    margin: 0 0 5px;
+    color: $primary-blue;
+    font-family: $font-stack-primary;
+    font-size: 32px;
+}
+
+.portfolio-tile-wrapper {
+    margin-bottom: $default-gutter;
+    display: flex;
+}
+
+.portfolio-tile {
+    padding: $default-gutter;
+    background: $tertiary-blue;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    color: white;
+    border: 1px solid $primary-blue;
+    width: 100%;
+
+    transition: background .1s ease-in-out;
+    -moz-transition: background .1s ease-in-out;
+    -webkit-transition: background .1s ease-in-out;
+}
+
+.portfolio-tile:hover {
+    background: $primary-blue;
+}
+
+.portfolio-tile h3 {
+    font-family: $font-stack-primary;
+    font-size: 24px;
+    margin: 0;
+}
+
+.portfolio-tile p {
+    font-family: $font-stack-paragraph;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.portfolio-tile .skills {
+    font-family: $font-stack-secondary;
+    font-size: 16px;
 }
 
 .contact-tile {
     width: 450px;
     margin: 0 auto;
     text-align: center;
-    font-family: Courier New, monospace;
+    font-family: $font-stack-secondary;
     font-size: 18px;
 }
 
 .contact-tile h3 {
     margin: 0;
     margin-bottom: 5px;
-    font-family: Roboto, arial, san-serif;
-    color: #246F9A;
+    font-family: $font-stack-primary;
+    color: $primary-blue;
+    font-size: 18px;
 }
 
 .contact-social {
@@ -175,15 +222,15 @@ nav a.active {
 }
 
 .contact-social a:last-child {
-    margin-left: 15px;
+    margin-left: $default-gutter;
 }
 
 footer {
     text-align: center;
     font-size: 12px;
-    font-family: Courier New, monospace;
+    font-family: $font-stack-secondary;
     color: #666666;
-    margin-top: 15px;
+    margin-top: $default-gutter;
 }
 
 footer ul {
@@ -195,7 +242,9 @@ footer a {
     color: inherit;
 }
 
-
+.wrapper {
+    margin: 0 10px;
+}
 
 /* ==========================================================================
    Media Queries

@@ -3,3 +3,21 @@ layout: default
 weight: 1
 ---
 
+<h2>Portfolio</h2>
+<div class="row">
+{% for item in site.portfolio %}
+<div class="portfolio-tile-wrapper col-xs-12 col-md-6">
+    <a href="{{ item.url }}" class="box-row portfolio-tile">
+        <div>
+            <h3>{{ item.title | escape }}</h3>
+        </div>
+        <p>
+            {{ item.description }}
+        </p>
+        <div class="skills">
+            <strong>Skills & Tech:</strong> {{ item.skills | escape }}
+        </div>
+    </a>
+</div>
+{% endfor %}
+</div>
