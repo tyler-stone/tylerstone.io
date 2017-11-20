@@ -236,6 +236,7 @@ a.img-link:hover {
     box-shadow: 0 0 6px rgba(0,0,0,0.15);
     
     h2 {
+        font-family: $font-stack-primary;
         text-align: center;
         color: white;
         margin: 10px;
@@ -258,6 +259,7 @@ a.img-link:hover {
 
     label {
         font-weight: bold;
+        display: block;
     }
 }
 
@@ -281,17 +283,24 @@ a.img-link:hover {
     margin-top: 20px;
 }
 
-.contact-social i.fa-twitter {
-    color: #43AAE1;
-    margin-right: 5px;
+.contact-social i {
+    &.fa-twitter {
+        color: #43AAE1;
+        margin-right: 5px;
+    }
+
+    &.fa-github {
+        color: #000000;
+        margin-right: 5px;
+    }
+
+    &.fa-linkedin {
+        color: #0077b5;
+        margin-right: 5px;
+    }
 }
 
-.contact-social i.fa-github {
-    color: #000000;
-    margin-right: 5px;
-}
-
-.contact-social a:last-child {
+.contact-social a {
     margin-left: $default-gutter;
 }
 
@@ -314,6 +323,10 @@ footer a {
 
 .wrapper {
     margin: 0 10px;
+}
+
+footer i {
+    margin-right: 10px;
 }
 
 /* ==========================================================================
