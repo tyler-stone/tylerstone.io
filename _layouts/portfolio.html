@@ -5,7 +5,8 @@ weight: 1
 
 <h2>Portfolio</h2>
 <div class="row">
-{% for item in site.portfolio %}
+{% assign portfolioItems = site.portfolio | sort: "weight" %}
+{% for item in portfolioItems %}
 <div class="portfolio-tile-wrapper col-xs-12 col-md-6">
     <a href="{{ item.url }}" class="box-row portfolio-tile">
         <div>

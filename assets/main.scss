@@ -143,13 +143,46 @@ nav a.active {
     padding: $default-gutter;
     box-shadow: 0 0 6px rgba(0,0,0,0.15);
     color: #666666;
+    
+    h3 {
+        margin: 0 0 5px;
+        color: $primary-blue;
+        font-family: $font-stack-primary;
+        font-size: 32px;
+    }
+    
+    img {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    a.btn {
+        padding: 10px 15px;
+        margin: 10px;
+        background: $tertiary-blue;
+        color: white;
+        display: inline-block;
+        border: 1px solid darken($tertiary-blue, 10%);
+        box-shadow: 0 0 6px rgba(0,0,0,0.15);
+
+        transition: box-shadow .1s ease-in-out;
+        -moz-transition: box-shadow .1s ease-in-out;
+        -webkit-transition: box-shadow .1s ease-in-out;
+
+        &:hover {
+            background: darken($tertiary-blue, 5%);
+            border: 1px solid darken($tertiary-blue, 10%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.30);
+        }
+
+        i {
+            margin-right: 8px;
+        }
+    }
 }
 
-.white-tile h3 {
-    margin: 0 0 5px;
-    color: $primary-blue;
-    font-family: $font-stack-primary;
-    font-size: 32px;
+a.img-link:hover {
+    border-bottom: inherit;
 }
 
 .portfolio-tile-wrapper {
@@ -159,40 +192,77 @@ nav a.active {
 
 .portfolio-tile {
     padding: $default-gutter;
-    background: $tertiary-blue;
+    background: white;
     box-shadow: 0 0 6px rgba(0,0,0,0.15);
-    color: white;
-    border: 1px solid $primary-blue;
+    color: #666666;
+    border: 1px solid $secondary-blue;
     width: 100%;
 
-    transition: background .1s ease-in-out;
-    -moz-transition: background .1s ease-in-out;
-    -webkit-transition: background .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    -moz-transition: box-shadow .1s ease-in-out;
+    -webkit-transition: box-shadow .1s ease-in-out;
+
+    &:hover {
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.30);
+        border: 1px solid $secondary-blue;
+    }
+    
+    h3 {
+        font-family: $font-stack-primary;
+        font-size: 24px;
+        color: $primary-blue;
+        margin: 0;
+    }
+    
+    p {
+        font-family: $font-stack-paragraph;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    .skills {
+        font-family: $font-stack-secondary;
+        font-size: 16px;
+    }
 }
 
-.portfolio-tile:hover {
+.portfolio-title-bar {
+    padding: 20px 15px;
     background: $primary-blue;
+    border-left: 1px solid $secondary-blue;
+    border-right: 1px solid $secondary-blue;
+    border-top: 1px solid $secondary-blue;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    
+    h2 {
+        text-align: center;
+        color: white;
+        margin: 10px;
+    }
+
+    span {
+        color: #7FB9DC;
+        display: block;
+        text-align: center;
+        font-family: $font-stack-secondary;
+    }
 }
 
-.portfolio-tile h3 {
-    font-family: $font-stack-primary;
-    font-size: 24px;
-    margin: 0;
-}
+.white-tile .portfolio-content {
+    h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
 
-.portfolio-tile p {
-    font-family: $font-stack-paragraph;
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.portfolio-tile .skills {
-    font-family: $font-stack-secondary;
-    font-size: 16px;
+    label {
+        font-weight: bold;
+    }
 }
 
 .contact-tile {
-    width: 450px;
+    max-width: 450px;
     margin: 0 auto;
     text-align: center;
     font-family: $font-stack-secondary;
@@ -307,6 +377,10 @@ footer a {
 
 .clearfix {
     *zoom: 1;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* ==========================================================================
