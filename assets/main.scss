@@ -118,6 +118,10 @@ nav li {
 a {
     color: #666666;
     text-decoration: none;
+
+    transition: border .1s ease-in-out;
+    -moz-transition: border .1s ease-in-out;
+    -webkit-transition: border .1s ease-in-out;
 }
 
 a:hover {
@@ -181,6 +185,14 @@ nav a.active {
     }
 }
 
+.skill-tag {
+    display: inline-block;
+    padding: 1px 5px;
+    color: #222;
+    border: 1px solid #ddd;
+    margin: 2px 4px 2px 0px;
+}
+
 a.img-link:hover {
     border-bottom: inherit;
 }
@@ -220,7 +232,7 @@ a.img-link:hover {
         font-size: 16px;
         margin: 10px 0;
     }
-    
+
     .skills {
         font-family: $font-stack-secondary;
         font-size: 16px;
@@ -241,10 +253,17 @@ a.img-link:hover {
         color: white;
         margin: 10px;
     }
+    
+    .skills {
+        font-family: $font-stack-secondary;
+        font-size: 16px;
+        text-align: center;
+    }
 
-    span {
+    .skill-tag {
+        border: 1px solid #7FB9DC;
         color: #7FB9DC;
-        display: block;
+        display: inline-block;
         text-align: center;
         font-family: $font-stack-secondary;
     }
@@ -306,10 +325,15 @@ a.img-link:hover {
 
 footer {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     font-family: $font-stack-secondary;
     color: #666666;
     margin-top: $default-gutter;
+
+    .author {
+        font-family: $font-stack-primary;
+        color: $primary-blue;
+    }
 }
 
 footer ul {

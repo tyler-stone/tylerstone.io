@@ -6,7 +6,9 @@ layout: default
   <section class="content">
       <div class="portfolio-title-bar">
           <h2>{{ page.title | escape }}</h2>
-          <span class="skills">{{ page.skills }}</span>
+          <div class="skills">
+							{% for skill in page.skills %}<span class="skill-tag">{{ skill }}</span>{% endfor %}
+					</div>
       </div>
 	  <div class="white-tile post-tile">
 	    <div class="portfolio-content">

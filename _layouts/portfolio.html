@@ -16,7 +16,7 @@ weight: 1
             {{ item.description }}
         </p>
         <div class="skills">
-            <strong>Skills & Tech:</strong> {{ item.skills | escape }}
+            {% for skill in item.skills %}<span class="skill-tag">{{ skill }}</span>{% endfor %}
         </div>
     </a>
 </div>
