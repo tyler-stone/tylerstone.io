@@ -3,7 +3,55 @@ layout: default
 weight: 1
 ---
 
-<h2>Portfolio</h2>
+<h2 class="top-level-header">Sup</h2>
+<div class="intro">
+    <p>
+        Hi, my name is Tyler and I'm a front-end designer and developer. I love creating subtle yet pleasing user experiences, testing
+        and validating new ideas, and tackling technical challenges. I am maniacally data-driven.
+    </p>
+    <p class="text-center">
+        I have experience building products from <strong>concept</strong> to <strong>design</strong> to <strong>implementation</strong>:
+    </p> 
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+            <div class="skill-highlight-box">
+                <h3>User Testing</h3>
+                <span>Test plan development, testing with enterprise customers, qualitative and quantitative data.</span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+            <div class="skill-highlight-box">
+                <h3>Product Analytics</h3>
+                <span>Identifying critical and most-used features to aid in future investment.</span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+            <div class="skill-highlight-box">
+                <h3>Design Tools</h3>
+                <span>Adobe Photoshop, Adobe Illustrator, Adobe XD, and InVision</span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+            <div class="skill-highlight-box">
+                <h3>Frameworks & Libraries</h3>
+                <span>Angular, jQuery, Jekyll, Bootstrap, HighCharts, and WordPress</span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+            <div class="skill-highlight-box">
+                <h3>Languages</h3>
+                <span>HTML5, CSS/Sass, JavaScript, Java, and Python</span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+            <div class="skill-highlight-box">
+                <h3>Tools</h3>
+                <span>Git, Grunt, Chrome Developer Tools, Node.js, npm, Mixpanel, and Jupyter Notebook</span>
+            </div>
+        </div>
+    </div>
+</div>
+<h2 class="top-level-header">Portfolio</h2>
 <div class="row">
 {% assign portfolioItems = site.portfolio | sort: "weight" %}
 {% for item in portfolioItems %}
