@@ -3,60 +3,75 @@ layout: default
 weight: 1
 ---
 
-<h2 class="top-level-header">Sup</h2>
+<h2 class="top-level-header">Hi friend</h2>
 <div class="intro">
     <p>
-        Hi, my name is Tyler and I'm a front-end designer and developer. I love creating subtle yet pleasing user experiences, testing
-        and validating new ideas, and tackling technical challenges. I am maniacally data-driven.
+        My name is Tyler and I'm a front-end <strong>designer</strong> and <strong>developer</strong> currently working at Dell EMC. I love creating subtle yet pleasing user experiences, testing
+        and validating new ideas, and tackling technical challenges. I am maniacally data-driven and I deeply enjoy taking products from concept to design to
+        implementation.
     </p>
-    <p class="text-center">
-        I have experience building products from <strong>concept</strong> to <strong>design</strong> to <strong>implementation</strong>:
-    </p> 
+</div>
+<h2 class="top-level-header">Skills</h2>
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+        <div class="col-xs-12 col-sm-6 col-md-3 skill-highlight-box-wrapper">
             <div class="skill-highlight-box">
-                <h3>User Testing</h3>
-                <span>Test plan development, testing with enterprise customers, qualitative and quantitative data.</span>
+                <h3>Design</h3>
+                <ul>
+                    <li class="skill-tag">User Testing</li>
+                    <li class="skill-tag">Adobe Photoshop</li>
+                    <li class="skill-tag">Adobe Illustrator</li>
+                    <li class="skill-tag">Adobe XD</li>
+                    <li class="skill-tag">InVision</li>
+                </ul>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
-            <div class="skill-highlight-box">
-                <h3>Product Analytics</h3>
-                <span>Identifying critical and most-used features to aid in future investment.</span>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
-            <div class="skill-highlight-box">
-                <h3>Design Tools</h3>
-                <span>Adobe Photoshop, Adobe Illustrator, Adobe XD, and InVision</span>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+        <div class="col-xs-12 col-sm-6 col-md-3 skill-highlight-box-wrapper">
             <div class="skill-highlight-box">
                 <h3>Frameworks & Libraries</h3>
-                <span>Angular, jQuery, Jekyll, Bootstrap, HighCharts, and WordPress</span>
+                <ul>
+                    <li class="skill-tag">AngularJS</li>
+                    <li class="skill-tag">jQuery</li>
+                    <li class="skill-tag">Jekyll</li>
+                    <li class="skill-tag">Bootstrap</li>
+                    <li class="skill-tag">HighCharts</li>
+                    <li class="skill-tag">WordPress</li>
+                </ul>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+        <div class="col-xs-12 col-sm-6 col-md-3 skill-highlight-box-wrapper">
             <div class="skill-highlight-box">
                 <h3>Languages</h3>
-                <span>HTML5, CSS/Sass, JavaScript, Java, and Python</span>
+                <ul>
+                    <li class="skill-tag">HTML5</li>
+                    <li class="skill-tag">CSS/Sass</li>
+                    <li class="skill-tag">JavaScript</li>
+                    <li class="skill-tag">Java</li>
+                    <li class="skill-tag">Python</li>
+                </ul>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 skill-highlight-box-wrapper">
+        <div class="col-xs-12 col-sm-6 col-md-3 skill-highlight-box-wrapper">
             <div class="skill-highlight-box">
                 <h3>Tools</h3>
-                <span>Git, Grunt, Chrome Developer Tools, Node.js, npm, Mixpanel, and Jupyter Notebook</span>
+                <ul>
+                    <li class="skill-tag">Git</li>
+                    <li class="skill-tag">Grunt</li>
+                    <li class="skill-tag">Chrome Dev Tools</li>
+                    <li class="skill-tag">Node.js</li>
+                    <li class="skill-tag">npm</li>
+                    <li class="skill-tag">Mixpanel</li>
+                    <li class="skill-tag">Jupyter Notebook</li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
 <h2 class="top-level-header">Portfolio</h2>
 <div class="row">
 {% assign portfolioItems = site.portfolio | sort: "weight" %}
 {% for item in portfolioItems %}
 <div class="portfolio-tile-wrapper col-xs-12 col-md-6">
     <a href="{{ item.url }}" class="box-row portfolio-tile">
+        
         <div>
             <h3>{{ item.title | escape }}</h3>
         </div>
